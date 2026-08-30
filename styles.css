@@ -131,12 +131,20 @@ button {
 .reveal {
   opacity: 0;
   transform: translateY(36px);
+  will-change: opacity, transform;
   transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (scripting: none) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 .reveal-delay-1 {
@@ -2296,6 +2304,7 @@ button {
   border-radius: 20px;
   overflow: hidden;
   margin: 32px 0 40px;
+  min-height: 200px;
   box-shadow: 0 12px 32px -6px rgba(15, 23, 42, 0.06);
 }
 

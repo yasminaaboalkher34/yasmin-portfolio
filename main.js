@@ -18,6 +18,12 @@ function initScrollReveal() {
   const reveals = document.querySelectorAll('.reveal');
   if (!reveals.length) return;
 
+  // Fallback for environments where IntersectionObserver is not supported
+  if (!('IntersectionObserver' in window)) {
+    reveals.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -27,10 +33,22 @@ function initScrollReveal() {
         }
       });
     },
-    { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+    { threshold: 0.05, rootMargin: '0px 0px -50px 0px' }
   );
 
   reveals.forEach((el) => observer.observe(el));
+
+  // Failsafe fallback: reveal all elements if scroll observer is blocked or delayed
+  setTimeout(() => {
+    reveals.forEach((el) => {
+      if (!el.classList.contains('is-visible')) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 200) {
+          el.classList.add('is-visible');
+        }
+      }
+    });
+  }, 1200);
 }
 
 /* ---------- Header Scroll ---------- */
