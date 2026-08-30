@@ -1,0 +1,77 @@
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pillar-card.border-glow-card {
+  padding: 0;
+}
+
+.pillar-card__content {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pillar-card__number {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.pillar-card__number--blue { color: #3B82F6; }
+.pillar-card__number--pink { color: #DB2777; }
+.pillar-card__number--green { color: #059669; }
+
+.pillar-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.75rem;
+}
+
+.pillar-card__desc {
+  font-size: 0.975rem;
+  color: #64748B;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.skill-chip {
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Accent Variations for Pills */
+.skill-chip--blue {
+  background-color: #EFF6FF;
+  color: #2563EB;
+}
+
+.skill-chip--pink {
+  background-color: #FDF2F8;
+  color: #DB2777;
+}
+
+.skill-chip--green {
+  background-color: #ECFDF5;
+  color: #059669;
+}
