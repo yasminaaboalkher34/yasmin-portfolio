@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPhotoTilt();
   initBorderGlow();
   initTestimonialsMarquee();
+  initScrollSpy();
 });
 
 /* ---------- Scroll Reveal (IntersectionObserver) ---------- */
@@ -274,6 +275,126 @@ function initTestimonialsMarquee() {
   }, { passive: true });
 }
 
+/* ---------- Single-Page Anchor Navigation & ScrollSpy ---------- */
+function initScrollSpy() {
+  const nav = document.getElementById('main-nav');
+  if (!nav) return;
+
+  const navLinks = Array.from(nav.querySelectorAll('.header-nav__link[href^="#"]'));
+  if (!navLinks.length) return;
+
+  // Map each anchor link to its corresponding section element
+  const sectionItems = [];
+  navLinks.forEach((link) => {
+    const targetId = link.getAttribute('href').slice(1);
+    const section = document.getElementById(targetId);
+    if (section) {
+      sectionItems.push({ id: targetId, element: section, link: link });
+    }
+  });
+
+  if (!sectionItems.length) return;
+
+  // Smooth scroll handler with header offset calculation
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href').slice(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        const header = document.getElementById('site-header');
+        const headerHeight = header ? header.offsetHeight : 72;
+        const targetTop = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+
+        window.scrollTo({
+          top: targetId === 'hero' ? 0 : Math.max(0, targetTop),
+          behavior: 'smooth'
+        });
+
+        // Immediately highlight clicked link
+        navLinks.forEach((l) => l.classList.remove('is-active'));
+        link.classList.add('is-active');
+
+        // Update URL hash without instant jump
+        if (history.pushState) {
+          history.pushState(null, null, `#${targetId}`);
+        }
+      }
+    });
+  });
+
+  // Highlight active link based on scroll position
+  let scrollTimeout = null;
+  function onScroll() {
+    if (scrollTimeout) return;
+    scrollTimeout = requestAnimationFrame(() => {
+      scrollTimeout = null;
+      updateActiveSection();
+    });
+  }
+
+  function updateActiveSection() {
+    const scrollY = window.scrollY;
+    const header = document.getElementById('site-header');
+    const headerHeight = header ? header.offsetHeight : 72;
+    const scrollPosition = scrollY + headerHeight + 80;
+    const windowBottom = scrollY + window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+
+    // Check if at the bottom of the page (activate contact)
+    if (windowBottom >= docHeight - 50) {
+      const contactItem = sectionItems.find((s) => s.id === 'contact');
+      if (contactItem) {
+        navLinks.forEach((l) => l.classList.remove('is-active'));
+        contactItem.link.classList.add('is-active');
+        return;
+      }
+    }
+
+    // Check if at the top of the page (activate hero)
+    if (scrollY < 100) {
+      const heroItem = sectionItems.find((s) => s.id === 'hero');
+      if (heroItem) {
+        navLinks.forEach((l) => l.classList.remove('is-active'));
+        heroItem.link.classList.add('is-active');
+        return;
+      }
+    }
+
+    // Find section covering the scroll position
+    let activeItem = null;
+    for (let i = 0; i < sectionItems.length; i++) {
+      const item = sectionItems[i];
+      const top = item.element.offsetTop;
+      const height = item.element.offsetHeight;
+
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        activeItem = item;
+        break;
+      }
+    }
+
+    // Fallback to highest section passed
+    if (!activeItem) {
+      for (let i = sectionItems.length - 1; i >= 0; i--) {
+        if (scrollPosition >= sectionItems[i].element.offsetTop) {
+          activeItem = sectionItems[i];
+          break;
+        }
+      }
+    }
+
+    if (activeItem) {
+      navLinks.forEach((l) => l.classList.remove('is-active'));
+      activeItem.link.classList.add('is-active');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  updateActiveSection();
+}
+
 window.copyEmail = copyEmail;
 window.initBorderGlow = initBorderGlow;
 window.initTestimonialsMarquee = initTestimonialsMarquee;
+window.initScrollSpy = initScrollSpy;

@@ -71,8 +71,16 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height, 72px) + 20px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+section[id],
+footer[id],
+.hero,
+.section {
+  scroll-margin-top: calc(var(--header-height, 72px) + 20px);
 }
 
 body {
@@ -575,7 +583,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .proof-chip {
