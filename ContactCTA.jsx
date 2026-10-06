@@ -33,7 +33,7 @@ export function ArrowUpRightIcon({ width = 16, height = 16, className = 'icon-ar
 export default function ContactCTA({
   email = 'yasminaboalkher34@gmail.com',
   subject = 'Product Design Inquiry',
-  resumePath = 'assets/Yasmin Aboalkhair Resume.pdf',
+  resumePath = 'assets/Yasmin_Aboalkher_Resume.pdf',
   className = ''
 }) {
   return (
