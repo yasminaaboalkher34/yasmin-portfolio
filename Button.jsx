@@ -10,7 +10,7 @@ export default function Button({
   size = 'medium', // 'medium' | 'large'
   href,
   isMailto = false,
-  email = 'yasminaboalkher34@gmail.com',
+  email = 'yasminaaboalkher34@gmail.com',
   subject = 'Product Design Inquiry',
   icon,
   className = '',

@@ -31,7 +31,7 @@ export function ArrowUpRightIcon({ width = 16, height = 16, className = 'icon-ar
  * Features the signature brand pink (#FF8BD2) CTA button with high-contrast text and mailto link.
  */
 export default function ContactCTA({
-  email = 'yasminaboalkher34@gmail.com',
+  email = 'yasminaaboalkher34@gmail.com',
   subject = 'Product Design Inquiry',
   resumePath = 'assets/Yasmin_Aboalkher_Resume.pdf',
   className = ''
