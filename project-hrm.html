@@ -69,11 +69,12 @@
       <!-- Case Study Hero Header -->
       <div class="case-hero-header reveal">
 
-        <h1 class="case-hero__title">Microtec Enterprise HRM </h1>
+        <h1 class="case-hero__title">Microtec Enterprise HRM: Scaling Workforce Operations for Egypt & Saudi Arabia
+        </h1>
         <p class="case-hero__subtitle">
-          Enterprise HR, labor law compliance, and operations platform for Egypt &amp; Saudi Arabia. Led end-to-end
-          UI/UX design across 4 core modules: Executive Dashboard, Personnel Affairs, Leaves &amp; Attendance, and
-          Payroll.
+          I led the end-to-end web and mobile design for an enterprise HRM platform, unifying scattered operations,
+          automating labor compliance for Egypt and Saudi Arabia, and scaling effortlessly to support 1,000+ employees
+          with faster engineering handoff.
         </p>
 
         <!-- Quick Metadata Bar -->
@@ -100,7 +101,7 @@
       <!-- Hero Cover Image -->
       <!-- INSERT HERO COVER IMAGE HERE -->
       <div class="case-hero-media reveal">
-        <img src="images/microtech web hero.jpg"
+        <img src="images/hrm-erp.png"
           alt="Microtec Enterprise HRM ERP desktop platform overview displayed on a MacBook mockup" loading="eager">
       </div>
 
@@ -111,14 +112,30 @@
         <section class="case-block reveal">
           <div class="case-block__heading-wrap">
             <span class="case-block__label">Objectives</span>
-            <h2 class="case-block__title">Project Overview</h2>
+            <h2 class="case-block__title">Context & Scope</h2>
           </div>
           <p class="case-text">
             <!-- INSERT TEXT: Overview paragraph -->
-            Microtec is a comprehensive enterprise human resource management (HRM) and workforce orchestration platform
-            designed for multi-branch organizations across Egypt and Saudi Arabia. The goal was to replace scattered
-            legacy spreadsheets, disconnected biometric devices, and paper approval loops with a unified, cloud-native
-            ERP dashboard.
+            Microtec is a workforce management and ERP platform built for multi-branch organizations in Egypt and Saudi
+            Arabia. The problem was clear: companies struggled with manual spreadsheets, disconnected tools, and
+            differing labor regulations across both countries.
+          <ul class="case-qa__list">
+            <li>Mapped complex HR operations across <strong>4</strong> core modules: <strong>Executive
+                Dashboard</strong>, <strong>Personnel
+                Affairs</strong>, <strong>Leaves &
+                Attendance</strong>, and <strong>Payroll</strong>.
+            </li>
+            <li> Structured the system to scale effortlessly for organizations managing <strong>1,000+</strong>
+              employees without
+              interface clutter.</li>
+            <li> Designed complete Arabic/RTL parity and automated labor law compliance for both
+              <strong>Egyptian</strong> and <strong>Saudi</strong> teams
+              .
+            </li>
+            <li>Streamlined design-to-code handoff by connecting Figma design tokens directly to <strong>Cursor</strong>
+              via <strong>Figma MCP</strong>.
+            </li>
+          </ul>
           </p>
 
 
@@ -128,13 +145,25 @@
         <section class="case-block reveal">
           <div class="case-block__heading-wrap">
             <span class="case-block__label">Problem Discovery</span>
-            <h2 class="case-block__title">Why HR Teams Were Losing Time?</h2>
+            <h2 class="case-block__title">User Experience Barriers & Business Impact</h2>
           </div>
           <p class="case-text">
             <!-- INSERT TEXT: Challenges summary -->
-            HR teams and employees were dealing with disconnected tools, manual leave tracking, and complex local labor
-            laws across Egypt and Saudi Arabia. This created extra admin work, caused frequent payroll errors, and left
-            employees with a frustrating experience.
+          <ul class="case-qa__list">
+            <li> <strong>Cross-border labor law complexity:</strong> Managing teams across Egypt and Saudi Arabia caused
+              frequent calculation errors in leave balances, deductions, and payroll regulations.
+            </li>
+            <li> <strong>Scalability bottlenecks:</strong> Legacy tools and spreadsheets lagged and cluttered
+              the screen when handling large employee rosters, making records hard to manage.
+            </li>
+            <li> <strong>Scattered, manual workflows:</strong> Attendance, employee documents, and requests were
+              managed in silos, wasting hours of HR admin time.
+            </li>
+            <li> <strong>Design-to-code drift:</strong> Complex enterprise tables and multi-tier permission flows risked
+              implementation errors and inconsistencies during development.
+            </li>
+            </li>
+          </ul>
           </p>
 
 
@@ -143,48 +172,103 @@
         <!-- 3. THE SOLUTION & ARCHITECTURE -->
         <section class="case-block reveal">
           <div class="case-block__heading-wrap">
-            <span class="case-block__label">Strategic UX Solution</span>
-            <h2 class="case-block__title">How Did We Turn Complex HR Operations into a Seamless Product?</h2>
+            <span class="case-block__label">Core Insights & Design Decisions</span>
+            <h2 class="case-block__title">Insight 01: Differing Labor Laws Created Constant Calculation Errors</h2>
+
           </div>
           <p class="case-text">
-            <!-- INSERT TEXT: Strategic approach -->
-            I split the system into main sections: Executive Dashboard, Personnel Affairs, Leaves &
-            Attendance, and Payroll & Compensation, while making sure it fully supports Egyptian and Saudi
-            regulations right out of the box.
-
-            To keep the handoff smooth, I tested the UI myself on local and staging builds, catching design bugs early
-            so the final build matched Figma 100%.
+            Egyptian and Saudi teams needed completely different rule sets for leaves, deductions, and labor policies
+            within the same platform.
           </p>
+          <ul class="case-qa__list">
+            <li><strong>Decision (Built-In Dual Compliance):</strong> Built dynamic compliance presets that
+              automatically adapt to
+              Egyptian or Saudi labor regulations based on the company branch or employee contract.
+            </li>
+            <li><strong>Decision (Complete Arabic/RTL Alignment):</strong> Designed the platform with native Arabic/RTL
+              parity,
+              ensuring intuitive data scanning for data-dense tables across regional teams.
 
-          <!-- INSERT IMAGE: Responsive Mockup -->
+          </ul>
+          <div class="case-block__heading-wrap">
 
+            <h2 class="case-block__title">Insight 02: Managing large employee rosters Caused Interface Clutter</h2>
+
+          </div>
+
+
+          <p class="case-text">
+            Large workforce tables were overwhelming to scan, filter, and update when handling massive headcount lists.
+          </p>
+          <ul class="case-qa__list">
+            <li><strong>Decision (High-Density, Scan-Friendly UI):</strong> Designed clean, data-dense tables with smart
+              multi-filtering, batch actions, and collapsible details to keep 1,000+ employee records fast and simple to
+              navigate.
+            </li>
+            <li><strong>Decision (Role-Based Access Control):</strong> Created customized views for Admins, Managers,
+              and Employees, ensuring users only see relevant actions and data without system friction.
+            </li>
+          </ul>
+
+          <div class="case-block__heading-wrap">
+
+            <h2 class="case-block__title">Insight 03: Complex Enterprise Tables Needed Seamless Engineering Handoff</h2>
+
+          </div>
+
+
+          <p class="case-text">
+            Handing off dense enterprise dashboards and permission matrices traditionally causes UI bugs and
+            implementation mismatches.
+          </p>
+          <ul class="case-qa__list">
+
+            <li><strong>Decision (AI-Driven Handoff with Figma MCP):</strong> Connected Figma design tokens and screens
+              directly to Cursor via Figma MCP, allowing developers to generate and refine accurate front-end code with
+              AI.
+            <li><strong>Decision (Direct Design QA on Staging):</strong> Personally tested production builds on staging
+              environments, catching discrepancies early to ensure 100% design-to-code parity.
+            </li>
+          </ul>
 
         </section>
+
 
         <!-- 4. CORE MODULES SHOWCASE -->
         <section class="case-block reveal">
           <div class="case-block__heading-wrap">
-            <span class="case-block__label">The Results</span>
-            <h2 class="case-block__title"> What Difference Did It Actually Make? </h2>
+            <span class="case-block__label">Validation</span>
+            <h2 class="case-block__title"> Workflow Validation & Staging QA </h2>
           </div>
           <p>
-            Unified HR admins and employees into a connected <strong>Web & Mobile ecosystem</strong> structured across
-            <strong>4 main sections</strong>. By prototyping in <strong>Figma Make</strong> for early workflow
-            validation with the business team,
-            every interface was rigorously tested on local and staging environments to guarantee <strong>100% Figma
-              parity</strong> before going live. Here is each section in action:
+            To ensure that dense enterprise flows remained intuitive and error-free before release, we tested
+            interactive prototypes and audited live builds:
+          <ul class="case-qa__list">
+
+            <li><strong>Evaluation:</strong> Tested task completion flows for
+              high-volume actions (batch leave approvals, 1,000+ employee filtering, and payroll generation).
+            <li><strong>Result:</strong> Early prototyping and staging QA eliminated edge-case calculation bugs and
+              ensured complete design parity with zero handoff confusion.
+            </li>
+            <li><strong>Launch:</strong> Successfully delivered across Web and Mobile with full compliance for Egyptian
+              and Saudi business branches.
+            </li>
+          </ul>
           </p>
+        </section>
 
-
-          <!-- Module A: Dashboard -->
+        <section class="case-block reveal">
+          <div class="case-block__heading-wrap">
+            <span class="case-block__label">Final Design</span>
+            <h2 class="case-block__title"> Delivering a unified Web & Mobile HRM platform for Microtec</h2>
+          </div>
           <div style="margin-top: 36px; margin-bottom: 48px;">
             <h3 style="font-size: 22px; font-weight: 800; color: var(--color-text-primary); margin-bottom: 12px;">
               A. Executive Dashboard
             </h3>
             <p class="case-text">
               <!-- INSERT TEXT: Dashboard description -->
-              The entry point, giving HR admins a quick overview of employees’ stats, pending requests, and key
-              workforce analytics.
+              High-level workforce KPIs, attendance trends, and 1-tap pending approvals.
             </p>
             <!-- INSERT IMAGE: Dashboard Screens -->
             <div class="case-media-card">
@@ -202,7 +286,7 @@
             </h3>
             <p class="case-text">
               <!-- INSERT TEXT: Personnel Affairs description -->
-              Managing employee records, profiles, job assignments, and company documents in one organized place.
+              Centralized digital employee records, contracts, and role-based permissions for 1,000+ staff.
             </p>
             <!-- INSERT IMAGE: Personnel Affairs Screens -->
             <div class="case-media-card">
@@ -220,7 +304,7 @@
             </h3>
             <p class="case-text">
               <!-- INSERT TEXT: Leaves description -->
-              Setting up leave policies, adding leave types, and handling employee requests and permissions.
+              Automated leave balances, shift scheduling, and localized leave policies for Egypt and Saudi Arabia.
 
             </p>
             <!-- INSERT IMAGE: Leaves & Attendance Screens -->
@@ -239,7 +323,8 @@
             </h3>
             <p class="case-text">
               <!-- INSERT TEXT: Payroll description -->
-              Handling salary breakdowns, monthly payrolls, bonuses, deductions, and financial requests.
+              Handling salary breakdowns, monthly payrolls, bonuses, deductions, and financial requests.Multi-currency
+              salary calculations, automated deductions, allowances, and advance requests.
             </p>
             <!-- INSERT IMAGE: Payroll & Advances Screens -->
             <div class="case-media-card">
@@ -250,26 +335,32 @@
             </div>
           </div>
         </section>
+        <!-- Module A: Dashboard -->
+
+
 
         <!-- 6. IMPACT & MEASURABLE OUTCOMES -->
         <section class="case-block reveal">
           <div class="case-block__heading-wrap">
             <span class="case-block__label">Reflection</span>
-            <h2 class="case-block__title">Key Takeaways</h2>
+            <h2 class="case-block__title">Impact & Results</h2>
           </div>
           <p class="case-text">
             <!-- INSERT TEXT: Impact summary -->
-            Microtec HRM was a data-heavy system, with dense tables, approval flows, and labor rules that differ between
-            Egypt and Saudi Arabia. Designing it taught me to put hierarchy and clarity ahead of decoration, so admins
-            can scan, filter, and act on large amounts of data quickly.
-          </p>
-          <p class="case-text">
-            To align with the business team early, I prototyped the system in Figma Make, so stakeholders could click
-            through real flows instead of reviewing static screens and give feedback before development started.
-          </p>
-          <p class="case-text">
-            During the staging phase, I ran design QA on the built screens, comparing them against the Figma files and
-            reporting the differences to the developers so the final product matched the intended design.
+          <ul class="case-qa__list">
+
+            <li><strong>Dual Labor Law Compliance:</strong> Successfully unified Egyptian and Saudi labor regulations
+              into a single
+              intuitive platform used by teams across both countries.
+            <li><strong>Scalability for 1,000+ Employees:</strong> Built a high-density, accessible interface that
+              makes managing enterprise-scale
+              workforce data simple, fast, and clutter-free.
+            </li>
+            <li><strong>Seamless AI-Driven Handoff:</strong> Eliminated implementation inconsistencies by connecting
+              Figma design tokens
+              directly to Cursor via Figma MCP and conducting direct Design QA.
+            </li>
+          </ul>
           </p>
         </section>
 
