@@ -142,18 +142,30 @@
           </div>
           <p class="case-text">
             <!-- INSERT TEXT: Challenges summary -->
-            Bored Farms already had a web-based crypto mining management platform. I took the existing system,
-            translated its core features to mobile, and developed them further into a dedicated mobile app (mobile only,
-            the web platform stayed as it was), aligning with the client's goal to give users greater accessibility and
-            usability on the go.
+          <ul class="case-qa__list">
+
+            <li><strong>Overwhelming technical and financial data:</strong> Crypto mining involves dense metrics
+              hashrates, uptime,
+              power usage, and fluctuating payouts that were hard to read on mobile screens.
+              intuitive platform used by teams across both countries.
+            <li><strong>Complex withdrawal and repayment flows:</strong> Multi-step wallet transfers and scattered
+              hosting
+              invoices created friction and hesitation during financial transactions.
+            </li>
+            <li><strong>Lack of real-time visibility:</strong> Investors had no quick way to spot offline mining
+              hardware
+              or check net daily earnings at a glance.
+
+            </li>
+            <li><strong>Inconsistent UI scaling:</strong> Without a unified design system, adding new wallet and
+              analytics modules risked cluttering the mobile experience.
+
+            </li>
+
+          </ul>
           </p>
 
-          <div class="case-media-card">
-            <img src="images/problems and solutions.png"
-              alt="UX problem and solution matrix outlining the transition from legacy web mining portal to modern mobile app"
-              class="case-media-card__img" loading="lazy">
 
-          </div>
 
 
 
@@ -162,23 +174,57 @@
         <!-- 3. THE SOLUTION & ARCHITECTURE -->
         <section class="case-block reveal">
           <div class="case-block__heading-wrap">
-            <span class="case-block__label">The Process</span>
-            <h2 class="case-block__title">Design Sprint </h2>
+            <span class="case-block__label">Core Insights & Design Decisions</span>
+            <h2 class="case-block__title">Insight 01: Investors Wanted Clear Profit Visibility, Not Raw Technical Logs
+            </h2>
+
           </div>
           <p class="case-text">
-            <!-- INSERT TEXT: Strategic approach -->
-            Using a structured Design Sprint approach, we audited the existing platform, mapped key flows like profit
-            tracking and withdrawals, and rapidly prototyped the experience. We then crafted a clean, light-themed UI
-            tailored for crypto users, continuously refining the design through stakeholder feedback.
+            Users opened the app daily to answer two simple questions: Are my miners running smoothly? and How much did
+            I earn today?
           </p>
+          <ul class="case-qa__list">
+            <li><strong>Decision (Real-Time Wallet & Analytics Dashboard):</strong> Designed a scannable home dashboard
+              highlighting
+              daily net profit, live hardware status (Online/Offline), and interactive earnings charts.
+            </li>
+            <li><strong>Decision (Scalable Mobile Design System):</strong> Built a clean component library from
+              scratch to standardize dense technical and financial metrics into easy-to-read cards.
+            </li>
+
+          </ul>
+          <div class="case-block__heading-wrap">
+
+            <h2 class="case-block__title">Insight 02: Financial Flows Needed Speed and Transparency</h2>
+
+          </div>
+
+
+          <p class="case-text">
+            Users hesitated when executing crypto withdrawals or paying hosting bills due to unclear steps and scattered
+            invoices.
+          <ul class="case-qa__list">
+            <li><strong>Decision (1-Tap Withdrawals & Payout Tracking):</strong> Streamlined profit withdrawals into a
+              guided
+              mobile flow with upfront fee breakdowns and live transaction tracking.
+            </li>
+            <li><strong>Decision (Simplified Invoice & Repayment Management):</strong> Centralized hosting bills, due
+              dates, and
+              repayment histories in one dedicated hub so users can settle balances without friction.
+            </li>
+          </ul>
           <div class="case-media-card">
             <img src="images/app icon.png" alt="Bored Farms mobile application icon and design sprint branding elements"
               class="case-media-card__img" loading="lazy">
 
           </div>
 
-
         </section>
+
+
+
+
+
 
         <!-- 4. CORE MODULES SHOWCASE -->
         <section class="case-block reveal">
